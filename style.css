@@ -1,0 +1,77 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400PX;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice{
+    transform-style: preserve-3d;
+    position: relative;
+    display: block;
+    transform-origin: 50% 50% 0;
+}
+.side{
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    display: flex;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    background-color: WHITE;
+    justify-content: space-between;
+    position: absolute;
+}
+
+ .front{
+    transform: translateZ(50px);
+}
+.back{
+    transform: translateZ(-50px);
+}
+.left {
+    transform: rotateX(90deg) translateZ(-50px);
+}
+.right {
+    transform: rotateX(90deg) translateZ(50px);
+}
+.top{
+    transform: rotateY(90deg) translateZ(50px);
+}
+.bottom{
+    transform: rotateY(90deg) translateZ(-50px);
+}
+
+.dice > div> ul{
+    width: 33%;
+    height: 100%;
+    list-style: none;
+}
+.dice > div> ul >li {
+    height: 33%;
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.dice >div>ul > .dot{
+    background-color: black;
+}
+.dice:hover{
+    transition: 5s;
+    transform: rotateX(360deg) rotateY(360deg);
+}
